@@ -18,14 +18,14 @@ System.Console.WriteLine();
 ["Russia", "Denmark", "Kazan"] -> [] ]
 */
 
-string[] ArraySorting(string[] array) 
+string[] ArraySorting(string[] array)                       //метод сортировки массива
 {
     string[] SortedArray = new string[array.Length];
     int count = 0; 
 
-    for (int i = 0; i < array.Length; i++) 
+    for (int i = 0; i < array.Length; i++)                  
     {
-        if (array[i].Length <= 3)
+        if (array[i].Length <= 3)                           //поиск элементов меньше 3-х символов
         {
             SortedArray[count] = array[i];
             count++;
@@ -34,7 +34,7 @@ string[] ArraySorting(string[] array)
     return SortedArray;
 }
 
-void PrintArray(string[] array)
+void PrintArray(string[] array)                             //вывод массива
 {
     for (int i = 0; i < array.Length; i++)
     {
@@ -45,9 +45,44 @@ void PrintArray(string[] array)
 
 
 //-------Main-----------------------------------------------------//
-System.Console.Write("Задан массив -> ");
-string[] array = { "1234", "1567", "-2", "computer science" };
-PrintArray(array);
-string[] NewArray = ArraySorting(array);
+System.Console.Write("Задан массив -> ");                
+string[] array = { "hello", "2", "world", ":-)" };          //задан массив
+PrintArray(array);                                          //печать массива
+string[] newArray = ArraySorting(array);                    //сортировка массива в новый массив
 System.Console.Write("Новый массив -> ");
-PrintArray(NewArray);
+PrintArray(newArray);                                       //печать нового массива
+System.Console.WriteLine();
+
+
+//--------Main1----------------------------------------------------// 
+
+System.Console.Write("Задан массив -> ");
+string[] array1 = { "1234", "1567", "-2", "computer science" };
+PrintArray(array1);
+string[] newArray1 = ArraySorting(array1);
+System.Console.Write("Новый массив -> ");
+PrintArray(newArray1);
+System.Console.WriteLine();
+
+
+//--------Main2---------------------------------------------------//
+
+System.Console.Write("Задан массив -> ");
+string[] array2 = { "Russia", "Denmark", "Kazan" };
+PrintArray(array2);
+string[] newArray2 = ArraySorting(array2);
+System.Console.Write("Новый массив -> ");
+PrintArray(newArray2);
+System.Console.WriteLine();
+
+
+//--------Main3---------------------------------------------------//
+
+System.Console.Write("Задан массив -> ");
+string[] array3 = { "Абрр", "Валк", "Вот", "Так", "Вот" };
+PrintArray(array3);
+string[] newArray3 = ArraySorting(array3);
+System.Console.Write("Новый массив -> ");
+PrintArray(newArray3);
+System.Console.WriteLine();
+
